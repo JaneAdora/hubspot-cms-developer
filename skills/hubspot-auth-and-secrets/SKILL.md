@@ -197,6 +197,8 @@ You never paste the secret to them directly. They read it from the vault. Per-cl
 
 HubSpot now monitors public sources (GitHub, npm, common log services) and **automatically deactivates** any token it finds exposed. This applies to PAKs, Service Keys, and Private App tokens.
 
+> **Token-with-write-access incidents** (like blog metadata being overwritten by a script using a Private App Token) are best prevented by combining the auth practices in this skill with the backup and diff protocols in `hubspot-safe-development`. Auth practices keep the wrong people from getting tokens; safe-development practices keep the right people from causing accidents with the tokens they have.
+
 ### Recovery if a token is auto-deactivated
 
 1. You will get a notification email from HubSpot

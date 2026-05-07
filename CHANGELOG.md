@@ -5,6 +5,18 @@ All notable changes to this plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2026-05-07
+
+### Added
+- New `hubspot-safe-development` skill covering pre-flight checks, sandbox-first policy, account verification rituals, backup workflow (`_backup/<YYYY-MM-DD>/` convention), diff-before-push protocol, HubSpot Design Manager revision history reference, and recovery procedures for four common incident classes (wrong-account push, `hs fetch` overwrite, blog metadata overwrite, editor-vs-code CSS conflict).
+- Cross-references to `hubspot-safe-development` from `hubspot-cli`, `hubspot-ci-cd`, `hubspot-react-themes`, and `hubspot-auth-and-secrets`.
+- README "Safety" section pointing readers to the new skill.
+- `_backup/` and `_diff/` patterns added to `.gitignore` so backup snapshots and diff staging directories don't accidentally get committed.
+
+### Changed
+- README skill count updated from 11 to 12.
+- Plugin keywords expanded with `safety`, `backup`, `diff`.
+
 ## [2.1.0] - 2026-05-06
 
 First public release.

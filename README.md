@@ -4,7 +4,7 @@ Opinionated guidance for HubSpot CMS development with Service Keys, the 1Passwor
 
 ## What's in here
 
-- **11 skills** covering CLI, HubL, themes, modules, HubDB, forms, React themes, CI/CD, MCP server integration, and auth/secrets management
+- **12 skills** covering CLI, HubL, themes, modules, HubDB, forms, React themes, CI/CD, MCP server integration, auth/secrets management, and safe-development workflows
 - **4 slash commands** for scaffolding themes, templates, and modules
 - **Opinionated 1Password workflow** with per-client vault isolation
 
@@ -38,6 +38,7 @@ Then restart Claude Code so the plugin loads.
 | Skill | What it covers |
 |---|---|
 | [`hubspot-auth-and-secrets`](skills/hubspot-auth-and-secrets/SKILL.md) | Service Keys, CLI Personal Access Keys, Private App Token migration, 1Password vault patterns, CI service accounts |
+| [`hubspot-safe-development`](skills/hubspot-safe-development/SKILL.md) | Pre-flight checks, sandbox-first policy, backup and diff protocols, incident recovery |
 | [`hubspot-cli`](skills/hubspot-cli/SKILL.md) | CLI v8.0.0 commands, project versions, deployment workflow |
 | [`hubspot-hubl`](skills/hubspot-hubl/SKILL.md) | HubL templating syntax, filters, control flow, CLDR locale formatting |
 | [`hubspot-templates`](skills/hubspot-templates/SKILL.md) | Page, blog, email, system templates and layouts |
@@ -69,6 +70,10 @@ This plugin assumes credentials live in 1Password and are injected via the `op` 
 Teammates get added to specific client vaults rather than a shared dev vault. This means access can be granted and revoked per client without touching other clients' credentials.
 
 For the full workflow including Service Keys, Private App Token migration, and CI service accounts, see [`hubspot-auth-and-secrets`](skills/hubspot-auth-and-secrets/SKILL.md).
+
+## Safety
+
+This plugin assumes a sandbox-first development workflow with backups and diff-before-push protocols. Before any `hs upload`, `hs fetch`, or production deploy, work through the pre-flight checklist in [`hubspot-safe-development`](skills/hubspot-safe-development/SKILL.md). The skill covers account verification, backup conventions, the diff-before-push protocol (which prevents editor-vs-code conflicts), and recovery procedures for the most common incident classes.
 
 ## Versioning
 

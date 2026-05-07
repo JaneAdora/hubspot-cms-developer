@@ -8,7 +8,7 @@
     {
       "name": "hubspot-cms-developer",
       "source": "./",
-      "description": "Expert guidance for HubSpot CMS development with CLI v8.0.0, HubL templating, theme development, module creation, React+HubL themes, CI/CD deployment, HubDB, MCP server integration, form styling, and an opinionated auth workflow using Service Keys plus the 1Password CLI for credential management."
+      "description": "Expert guidance for HubSpot CMS development with CLI v8.0.0, HubL templating, theme development, module creation, React+HubL themes, CI/CD deployment, HubDB, MCP server integration, form styling, an opinionated auth workflow using Service Keys plus the 1Password CLI, and safe-development protocols (sandbox-first, backup, diff-before-push, incident recovery)."
     }
   ]
 }

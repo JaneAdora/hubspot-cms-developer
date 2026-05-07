@@ -77,6 +77,8 @@ For CI/CD and automated workflows, use environment variables instead of config f
 
 Upload files to HubSpot. **Changes are live immediately.**
 
+> **Before any `hs upload`**, run through the pre-flight checklist and diff-before-push protocol in `hubspot-safe-development`. The "live immediately" property means there is no soft delete or undo at the CLI level.
+
 ```bash
 # Upload directory
 hs upload src/theme my-theme
@@ -141,7 +143,7 @@ The following commands were removed and have no direct replacement:
 | Removed Command | Alternative |
 |----------------|-------------|
 | `hs create` | `hs cms` |
-| `hs fetch` | Download from Design Manager UI, or use `hs watch` for sync workflow |
+| `hs fetch` | Download from Design Manager UI. **Always commit or stash local changes first** to avoid `hs fetch` overwriting WIP. See `hubspot-safe-development`. |
 | `hs theme preview` | Use `hs watch --initial-upload` and preview on HubSpot directly |
 | `hs init` | `hs account auth` |
 

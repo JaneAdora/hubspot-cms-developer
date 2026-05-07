@@ -5,6 +5,8 @@ description: GitHub Actions auto-deploy workflow for HubSpot CMS themes, environ
 
 # HubSpot CI/CD with GitHub Actions
 
+> **For local-development safety patterns**, see the `hubspot-safe-development` skill (pre-flight checks, sandbox-first policy, backup and diff protocols). This skill covers automated CI/CD only.
+
 ## Why Use CI/CD?
 
 - Automated deployment on push (no manual `hs upload`)

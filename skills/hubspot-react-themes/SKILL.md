@@ -329,6 +329,8 @@ module.exports = ({ account, autoupload }) => ({
 
 ## Development Workflow
 
+> **Before pushing any React theme to a production account**, run through the safety protocols in `hubspot-safe-development`. React themes deploy via `hs project upload` which is just as irreversible as `hs upload`.
+
 ### Local Development
 
 ```bash
